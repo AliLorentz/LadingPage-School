@@ -1,0 +1,849 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+header{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom,
+ rgba(92, 65, 160, 0.9),
+ rgba(92, 65, 160, 0.9),
+ rgba(92, 65, 160, 0.9)
+  ),url(img/fondo.jpg);
+    background-size: cover;/*Centra la imagen */
+    background-position: center;
+    padding: 70px 0;
+	transform: skew(0deg, -10deg) translateY(-140px); /*skeweed*/
+  
+    
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    transform: skew(0deg, 10deg)  /*skeweed*/
+  }
+
+
+.contenedor-nav{
+padding: 100px 200px;   /*skeweed*/
+display: flex;
+justify-content: space-between;
+margin: auto;
+align-items: center;
+width: 80%;
+height: inherit;
+max-width: 1000px;
+
+
+}
+
+nav .enlaces a{
+    margin: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: #fff;
+}
+
+
+nav .enlaces a:hover{
+    border-bottom: 4px solid #fff;    
+    
+}
+
+.logo img{
+    margin-top: 10px;
+    height: 50px;
+}
+
+.principal{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.texto{
+
+    align-self: center;
+}
+
+.texto>h1{
+    font-size: 50px;
+    font-weight: bold;
+    
+  }
+  .texto>h2{
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .principal .boton{
+      margin-top: 20px;
+      font-size: 15px;
+  }
+
+  .principal .boton a{
+   
+    color: #fff;
+    margin: 10px;
+    padding:10px 20px;;
+    width: 128px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+
+  .principal .boton a:hover{
+      background:  #37E1AB;
+      font-weight:bold;
+      box-shadow: 2px 2px 5px #000;
+
+      
+  }
+  .icono{
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+  }
+
+  @media screen and (max-width:700px){
+ 
+    .contenedor-nav{
+        padding: 90px 0px;    
+        display: flex;  
+       
+        
+      }   
+     
+      .enlaces{
+        position: fixed;
+        top:180px;
+        background: rgba(59, 27, 109,0.9);
+        left: 0;
+        height: 340px;    
+        width: 0;
+        transition: 1s;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .enlaces a{
+        display: block;
+        width: 90%;
+        height: 10px;
+        padding: 10px;
+        text-align: center;
+        background: rgb(92, 65, 160);
+        color: #fff;
+      }
+
+      .icono{
+          color:#fff;
+        display: block;
+        cursor: pointer;
+      }      
+  }
+
+  @media screen and (max-width:1400px){
+      .contenedor-nav{      
+        padding: 100px 0px; 
+
+      }
+  }
+
+  
+
+
+ 
+
+  /*##################TABLA DE PRECIOS#############################*/
+
+  .contenedor{
+    margin-left: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .contenedor .definicion {
+      font-size: 25px;
+  }
+
+  .caja{
+
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.tabla{
+    margin-top: 30px;
+    margin-right: 10px;
+    width: 50px;
+    height: 350px;
+    border: 1px solid rgba(159, 156, 160, 0.4);
+    border-radius: 4px;
+    padding: 60px;
+    text-align: center;
+    color: #2D2D2D;
+    flex-grow: 1; /*RELLENA TODO EL ESPACIO */
+}
+
+.tabla>h2{  
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.tabla  img{
+    width: 64px;
+    margin-bottom: 35px;
+}
+
+.tabla>h3{
+    font-size: 30px;
+    margin-bottom:20px; 
+}
+
+.tabla > p{
+    display:block;
+    margin-bottom: 20px;  
+}
+
+.botonn{
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    border: 1px solid rgba(159, 156, 160, 0.4);
+    text-decoration: none;
+    color: #2D2D2D;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.tabla:hover{
+    background:#5C41A0;
+    color: #f1f1f2;
+    transition: 0.5s all;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.botonn:hover{
+    color: #f1f1f2;
+    
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .tabla{
+        width: 45%;
+       max-width: none;
+       margin-bottom: 40px;
+       flex-grow:initial; 
+    }
+    .contenedor .definicion{
+        font-size: 20px;
+        text-align: center;
+        width: 80%;
+        margin-left: -50px;
+    }
+    }
+
+    @media screen and (max-width: 700px){
+        .tabla{
+            width: 50%;
+            padding: 30px;         
+        }
+        .botonn{
+            width: 80px;
+        }
+        tabla>h2{
+            margin-top: 40px;
+        }
+    }
+
+    @media screen and (max-width: 550px){
+        .tabla{
+            width: 85%;
+            padding: 20px;
+        }
+    }
+
+    @media screen and (max-width: 550px){
+        .tabla{
+            width: 70%;
+            padding: 20px;
+        }
+
+        .contenedor{
+            margin-left: 70px;
+            width: 70%;
+        }
+    }
+
+
+/*#############Contenidos del curso###################*/
+
+.informacion{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.definicion{
+    font-size: 25px;
+}
+
+.caja-row{
+    width:1064px;
+    height:500px;
+    display: fleX;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.caja-row-2{
+    width:1064px;
+    height:500px;
+    display: fleX;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.titulo-p {
+    font-size: 30px;
+}
+.texto-p{
+    margin-top: 30px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.contexto{
+    margin: 80px;
+}
+
+.contexto .btn-info{  
+    display: inline-block;
+    line-height: 30px;
+    width: 110px;
+    height: 30px;
+    padding: 12px;
+    color:  rgba(92, 45, 110, 0.9);
+    border: 1px solid  rgba(92, 45, 110, 0.9);
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px; 
+    margin: auto;
+}
+
+    @media screen and (max-width: 1000px){
+        
+        .definicion{
+            font-size: 20px;
+            width: 40%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .informacion .caja-row{
+            width: 80%;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .informacion-2 .caja-row{
+            width: 80%;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .informacion-2 .caja-row-2{
+            width: 80%;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+
+        .contexto{
+            margin: 10px;
+        }
+        .contexto img{
+          width: 200px;
+          
+        }
+        .titulo-p {
+            font-size: 20px;
+        }
+        .texto-p{
+            margin-top: 20px;
+            width: 200px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 360px){
+        .informacion-2 .caja-row-2{
+            margin-top: 40px;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }
+        .informacion-2 .caja-row{
+            margin-top: 40px;
+        }
+        .informacion .caja-row{
+            margin-top: 20px;
+        }
+
+        .informacion-2 .contexto{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .informacion .contexto{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+
+/*------------------Paquete premium##############################
+*/
+
+.paquete-texto{
+    text-align: center;
+}
+.importante{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.paquete-texto .definicion{
+    font-weight:bold;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.paquete-texto{
+    
+    color: #2D2D2D;
+    margin:auto;   
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.def-pack{
+    font-size: 20px;
+}
+.def-pack2{
+    color: #f1f1f2;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.paquete-pack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #07d6a9;
+    width: 120px;
+    padding: 10px;
+    border-radius: 80px;
+}
+
+
+.servicio-pack{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(168, 35, 221);
+}
+
+@media screen and (max-width: 360px){
+    .paquete-texto{
+        width: 80%;
+    }
+}
+/*TABLA*/
+
+.paquetes {    
+    display: flex;
+    justify-content: center;  
+}
+
+
+.tabla-pack{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid  rgb(81, 80, 82,0.5);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px;;
+}
+
+.descripcion-pack{
+    display: flex;
+    justify-content: space-between;
+  
+    margin-bottom: 40px;
+   
+}
+
+.productos-pack{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.productos-pack .producto{
+    color: rgb(81, 80, 82);
+    margin-bottom: 20px;
+    display: flex;
+    
+}
+
+.productos-pack .producto img{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.paquetes .btn-info{
+    display: inline-block;
+    line-height: 20px; /*Problemas con el centrado del boton*/
+    width: 200px;
+    height: 20px;
+    padding: 12px;
+    color:  rgba(92, 45, 110, 0.9);
+    border: 1px solid  rgba(92, 45, 110, 0.9);
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px; 
+    margin: auto;
+}
+
+
+.btn-info:hover{
+    color: white;
+    background:rgba(92, 45, 110,1);
+}
+
+.tabla-pack:last-child{
+    border: 3px solid  #7034C7;
+}
+
+@media screen and (max-width: 1000px){
+    .paquetes{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tabla-pack{
+        width: 40%;
+
+    }
+
+    .paquete-texto{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        
+    }
+    .importante{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .paquete-texto .definicion{
+        width: 80%;
+        font-weight:bold;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .tabla-pack{
+        width: 70%;
+
+    }
+
+    .paquetes .btn-info{
+        width: 150px;
+    }
+}
+
+/*###############FOOTER#################*/
+footer{
+    
+    width: 100%;
+    
+
+}
+.principal-footer{
+   
+    margin: auto;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 40px;
+
+}
+
+.learn-footer{
+    display: flex;
+    align-items: center;
+}
+
+.learn-footer .prin{
+    font-size: 20px;
+    margin-right: 40px;
+    color:#D6CDE9;
+}
+
+
+.learn-footer .btn-footer{
+    display: inline-block;
+    line-height: 40px; /*Problemas con el centrado del boton*/
+    width: 120px;
+    height: 40px;
+    padding: 12px;
+    background: #37E1AB;
+    color:#D6CDE9;
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px; 
+    margin: auto;
+}
+
+.btn-footer:hover{
+    background:#049676; 
+}
+
+.logo-footer img{
+    width: 90px;
+    margin-left: 60px;
+}
+
+.logo-footer .des-logo{
+    color:#D6CDE9;
+    font-size: 14px;
+}
+
+.color-footer{
+    background: #5C41A0;
+}
+
+.color-footerr2{
+    background:	#7034C7;
+}
+
+.color-footer2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.cont-foot{
+   display: flex;
+   flex-direction: column;
+  
+   width: 220px;
+   flex-grow: 1;
+   
+}
+
+.cont-foot .titulo{
+    color:#37E1AB;
+    font-weight: bold;
+    margin-top: 20px;
+}
+  
+.cont-foot .titulo-ultimo{
+    color:#37E1AB;
+    font-weight:bold;
+    margin-top: 60px;
+}
+
+.cont-foot .text-foot{
+    font-size: 15px;
+    margin-top: 20px;
+    color: #f1f1f2;
+}
+
+.cont-foot img{
+    margin-top: 20px;
+    width:220px;;
+}
+
+.color-footer3{
+    margin-top: .6px;
+    background:	#7034C7;
+    
+}
+
+.register-foot{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-foot img{
+    width: 20px;
+    margin: 0 10px;
+}
+
+.register-foot p{
+ margin: 0 20px;
+ color: #D6CDE9;
+}
+
+@media screen and (max-width: 1000px){
+
+    .principal-footer{ 
+        margin: auto;
+        margin-top: 100px;
+        align-items: center;
+        width: 70%;
+        padding: 40px;
+    
+    }
+
+    .logo-footer img{
+        width: 70px;
+        margin-left: 30px;
+    }
+
+    .learn-footer .prin{
+        font-size: 15px;
+        margin-left: 80px;
+        margin-right: 0px;
+        
+    }
+    
+    
+
+    .color-footer2{
+        flex-wrap: wrap;
+        width: 70%;      
+    }
+
+    .cont-foot img{
+        margin-top: 5px;
+        width:110px;;
+    }
+
+    .cont-foot{
+        width: 30%;
+    }
+
+    .cont-foot .titulo-ultimo{
+        margin-top:40px;
+        width: 30%;
+
+    }
+
+    .color-footer3{
+        margin-top: 2px;
+        
+    }
+
+    
+}
+
+@media screen and (max-width: 360px){
+.learn-footer{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.principal-footer{ 
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+
+}
+
+.learn-footer .btn-footer{
+    line-height: 20px; /*Problemas con el centrado del boton*/
+    width: 90px;
+    height: 20px;
+    padding: 10px;
+
+    font-weight: 600;
+    font-size: 17px; 
+
+}
+.learn-footer .prin{
+    font-size: 15px;
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    color:#D6CDE9;
+}
+
+.color-footer2{
+    flex-wrap: wrap;
+    width: 80%;      
+}
+.cont-foot{
+    width: 40%;
+}
+
+.cont-foot .titulo-ultimo{
+    margin-top:0px;
+    width: 40%;
+
+}
+
+}
